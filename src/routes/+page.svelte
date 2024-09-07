@@ -5,8 +5,6 @@
 		PUBLIC_SUPABASE_URL,
 		PUBLIC_SUPABASE_KEY
 	);
-	import { decode } from "base64-arraybuffer";
-    import { read } from "$app/server";
 
 	let fileinput: any;
 	let filename: string;
@@ -78,7 +76,6 @@
 		{#if pic_url}
 			<p>Image Preview</p>
 			<img src="{pic_url}" alt="" width="200px"/><br />
-			{pic_url}
 			<button on:click={uploadImage}>Upload</button>
 		{/if}
 		
